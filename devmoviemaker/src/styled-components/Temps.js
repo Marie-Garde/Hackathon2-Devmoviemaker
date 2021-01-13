@@ -20,7 +20,7 @@ export const FlexBox2 = styled.div`
 export const Flex1 = styled.div`
   display: flex;
   background-color: red;
-  width: ${(id) => id.number * 200}px;
+  width: ${(id) => (id.number !== 0 ? 200 + id.number * 1.2 : 200)}px;
   height: 20vh;
 `;
 

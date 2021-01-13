@@ -39,6 +39,9 @@ export default function Temps() {
                 name="number"
                 id={number}
                 placeholder="0"
+                min="0"
+                max="150"
+                step="15"
                 onChange={handleNumberChange}
               />
             </DivLabel>
