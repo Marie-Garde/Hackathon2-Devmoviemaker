@@ -13,9 +13,9 @@ import { MainDiv, Img, DivButton } from "../styled-components/Stepper";
 const useStyles = makeStyles((theme) => ({
   root: {
     
-    width: "20%",
+    width: "80%",
     height: "50%",
-    paddingLeft : "1.8%"
+    paddingLeft : "10%"
   },
   button: {
     marginTop: theme.spacing(1),
