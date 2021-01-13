@@ -10,6 +10,7 @@ import {
   Flex4,
   Flex5,
   Flex6,
+  ContainerFlex1,
   Formulaire,
   DivLabel,
   Label,
@@ -30,23 +31,25 @@ export default function Temps() {
   return (
     <Background>
       <FlexBox1>
-        <Flex1 number={number}>
-          <Formulaire onSubmit={() => handleForm}>
-            <DivLabel>
-              <Label>Durée :</Label>
-              <Input
-                type="number"
-                name="number"
-                id={number}
-                placeholder="0"
-                min="0"
-                max="150"
-                step="15"
-                onChange={handleNumberChange}
-              />
-            </DivLabel>
-          </Formulaire>
-        </Flex1>
+        <ContainerFlex1>
+          <Flex1 number={number}>
+            <Formulaire onSubmit={() => handleForm}>
+              <DivLabel>
+                <Label>Durée :</Label>
+                <Input
+                  type="number"
+                  name="number"
+                  id={number}
+                  placeholder="0"
+                  min="0"
+                  max="150"
+                  step="15"
+                  onChange={handleNumberChange}
+                />
+              </DivLabel>
+            </Formulaire>
+          </Flex1>
+        </ContainerFlex1>
         <Flex2></Flex2>
         <Flex3></Flex3>
       </FlexBox1>
