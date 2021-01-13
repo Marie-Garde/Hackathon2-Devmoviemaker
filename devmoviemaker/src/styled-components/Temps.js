@@ -17,11 +17,17 @@ export const FlexBox2 = styled.div`
   justify-content: space-around;
 `;
 
+export const ContainerFlex1 = styled.div`
+  display: flex;
+  width: 15%;
+  background-color: #b22222;
+`;
+
 export const Flex1 = styled.div`
   display: flex;
-  background-color: red;
-  width: ${(id) => (id.number !== 0 ? 200 + id.number * 1.2 : 200)}px;
-  height: 20vh;
+  background-color: #ff0000;
+  width: ${(id) => (id.number !== 0 ? 0 + id.number * 1.3 : 0)}px;
+  height: 100%;
 `;
 
 export const Flex2 = styled.div`
@@ -61,7 +67,6 @@ export const Flex6 = styled.div`
 export const Formulaire = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 5vw;
 `;
 
 export const DivLabel = styled.div`
