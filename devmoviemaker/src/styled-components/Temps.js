@@ -19,21 +19,21 @@ export const FlexBox2 = styled.div`
 
 export const ContainerFlex1 = styled.div`
   display: flex;
-  width: 15%;
+  width: 10%;
   background-color: #b22222;
 `;
 
 export const Flex1 = styled.div`
   display: flex;
   background-color: #ff0000;
-  width: ${(id) => (id.number !== 0 ? 0 + id.number * 1.3 : 0)}px;
+  width: ${(id) => (id.number.flex1 !== 0 ? 0 + id.number * 1.3 : 0)}px;
   height: 100%;
 `;
 
 export const Flex2 = styled.div`
   display: flex;
   background-color: blue;
-  width: 10vw;
+  width: ${(id) => (id.number.flex2 !== 0 ? 0 + id.number * 1.3 : 0)}px;
   height: 10vh;
 `;
 

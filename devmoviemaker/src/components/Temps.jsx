@@ -21,10 +21,11 @@ export default function Temps() {
   const [number, setNumber] = useState({
     flex1: 0,
     flex2: 0,
+    flex3: 0,
   });
   console.log(number);
   const handleNumberChange = (e) => {
-    setNumber({ flex1: e.target.value });
+    setNumber({ ...number, [e.target.name]: e.target.value });
   };
 
   const handleForm = (e) => {
@@ -41,7 +42,7 @@ export default function Temps() {
                 <Label>Durée :</Label>
                 <Input
                   type="number"
-                  name="number"
+                  name="flex1"
                   id={number.flex1}
                   placeholder="0"
                   min="0"
@@ -53,7 +54,25 @@ export default function Temps() {
             </Formulaire>
           </Flex1>
         </ContainerFlex1>
-        <Flex2></Flex2>
+        <ContainerFlex1>
+          <Flex2 number={number.flex2}>
+            <Formulaire onSubmit={() => handleForm}>
+              <DivLabel>
+                <Label>Durée :</Label>
+                <Input
+                  type="number"
+                  name="flex2"
+                  id={number.flex2}
+                  placeholder="0"
+                  min="0"
+                  max="150"
+                  step="15"
+                  onChange={handleNumberChange}
+                />
+              </DivLabel>
+            </Formulaire>
+          </Flex2>
+        </ContainerFlex1>
         <Flex3></Flex3>
       </FlexBox1>
       <FlexBox2>
