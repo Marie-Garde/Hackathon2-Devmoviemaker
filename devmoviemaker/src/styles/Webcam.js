@@ -19,8 +19,8 @@ export const Main = styled.div`
 
   button {
     display: inline-block;
-    padding: 0.7em 1.7em;
-    margin: 0 0.3em 0.3em 0;
+    padding: 0.7em 2em;
+    margin: 0.2em 0.5em;
     border-radius: 0.2em;
     border-style: none;
     box-sizing: border-box;
