@@ -10,12 +10,15 @@ const Webcam = () => {
         <p>Statut de la caméra : {recordWebcam.status}</p>
         {recordWebcam.status !== "CLOSED" ? (
           <div>
-            <video ref={recordWebcam.webcamRef} autoPlay muted />
-            <video ref={recordWebcam.previewRef} autoPlay muted loop />
+            {recordWebcam.status === "PREVIEW" ? (
+              <video ref={recordWebcam.previewRef} autoPlay muted loop />
+            ) : (
+              <video ref={recordWebcam.webcamRef} autoPlay muted />
+            )}
           </div>
         ) : (
           <div>
-            <img src={noSignal} alt="FU" />
+            <img src={noSignal} alt="no signal" />
           </div>
         )}
       </div>
