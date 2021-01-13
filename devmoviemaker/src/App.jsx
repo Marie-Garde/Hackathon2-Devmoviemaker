@@ -4,7 +4,7 @@ import Webcam from "./components/Webcam";
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {
-  const page = useSelector((state) => state.menuReducer.page);
+  const { page } = useSelector((state) => state.menuReducer);
   const dispatch = useDispatch();
 
   const renderPage = () => {
