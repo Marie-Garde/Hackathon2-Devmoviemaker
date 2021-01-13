@@ -18,10 +18,13 @@ import {
 } from "../styled-components/Temps.js";
 
 export default function Temps() {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState({
+    flex1: 0,
+    flex2: 0,
+  });
   console.log(number);
   const handleNumberChange = (e) => {
-    setNumber(e.target.value);
+    setNumber({ flex1: e.target.value });
   };
 
   const handleForm = (e) => {
@@ -32,14 +35,14 @@ export default function Temps() {
     <Background>
       <FlexBox1>
         <ContainerFlex1>
-          <Flex1 number={number}>
+          <Flex1 number={number.flex1}>
             <Formulaire onSubmit={() => handleForm}>
               <DivLabel>
                 <Label>Durée :</Label>
                 <Input
                   type="number"
                   name="number"
-                  id={number}
+                  id={number.flex1}
                   placeholder="0"
                   min="0"
                   max="150"
