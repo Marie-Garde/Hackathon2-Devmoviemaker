@@ -7,11 +7,10 @@ import Slider from "./components/Mycaroussel/Caroussel"
 function App() {
   return (
     <div>
-      <PagePresentation/>
+      <Slider />  
       <Reset />
       <VerticalLinearStepper/>
       <Webcam />
-      <Slider />
     </div>
   );
 }

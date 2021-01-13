@@ -8,7 +8,7 @@ export default styled.div`
   text-align: center;
   padding: 5px 8px 5px 8px;
   line-height: 2em;
-  background-color: #683bb7;
+  background-color: #0e2a47;
   color: #fff;
   margin: 5px;
   font-size: 1.2em;
