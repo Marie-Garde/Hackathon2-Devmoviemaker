@@ -1,9 +1,10 @@
-import { useRecordWebcam, CAMERA_STATUS } from "react-record-webcam";
+import { useRecordWebcam } from "react-record-webcam";
+import { Main } from "../styles/Webcam";
 
 const Webcam = () => {
   const recordWebcam = useRecordWebcam();
   return (
-    <div>
+    <Main>
       <div>
         <p>Camera status: {recordWebcam.status}</p>
         {recordWebcam.status ? (
@@ -22,7 +23,7 @@ const Webcam = () => {
         <button onClick={recordWebcam.retake}>Retake recording</button>
         <button onClick={recordWebcam.download}>Download recording</button>
       </div>
-    </div>
+    </Main>
   );
 };
 
