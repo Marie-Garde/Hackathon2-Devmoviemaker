@@ -1,8 +1,20 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
   video {
     border-radius: 0.5em;
+    width: 30vw;
+  }
+
+  img {
+    border-radius: 0.5em;
+    width: 30vw;
   }
 
   button {

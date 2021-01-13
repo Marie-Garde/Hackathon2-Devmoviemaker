@@ -1,5 +1,6 @@
 import { useRecordWebcam } from "react-record-webcam";
 import { Main } from "../styles/Webcam";
+import noSignal from "../assets/images/noSignal.jpg";
 
 const Webcam = () => {
   const recordWebcam = useRecordWebcam();
@@ -7,13 +8,15 @@ const Webcam = () => {
     <Main>
       <div>
         <p>Statut de la caméra : {recordWebcam.status}</p>
-        {recordWebcam.status ? (
+        {recordWebcam.status !== "CLOSED" ? (
           <div>
             <video ref={recordWebcam.webcamRef} autoPlay muted />
             <video ref={recordWebcam.previewRef} autoPlay muted loop />
           </div>
         ) : (
-          ""
+          <div>
+            <img src={noSignal} alt="FU" />
+          </div>
         )}
       </div>
       <div>
