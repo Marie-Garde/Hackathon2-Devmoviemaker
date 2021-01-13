@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
+  video {
+    border-radius: 0.5em;
+  }
+
   button {
     display: inline-block;
     padding: 0.7em 1.7em;

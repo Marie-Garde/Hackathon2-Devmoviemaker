@@ -6,22 +6,22 @@ const Webcam = () => {
   return (
     <Main>
       <div>
-        <p>Camera status: {recordWebcam.status}</p>
+        <p>Statut de la caméra : {recordWebcam.status}</p>
         {recordWebcam.status ? (
           <div>
             <video ref={recordWebcam.webcamRef} autoPlay muted />
-            <video ref={recordWebcam.previewRef} autoPlay muted loop />{" "}
+            <video ref={recordWebcam.previewRef} autoPlay muted loop />
           </div>
         ) : (
           ""
         )}
       </div>
       <div>
-        <button onClick={recordWebcam.open}>Open camera</button>
-        <button onClick={recordWebcam.start}>Start recording</button>
-        <button onClick={recordWebcam.stop}>Stop recording</button>
-        <button onClick={recordWebcam.retake}>Retake recording</button>
-        <button onClick={recordWebcam.download}>Download recording</button>
+        <button onClick={recordWebcam.open}>Ouvrir</button>
+        <button onClick={recordWebcam.start}>Demarrer</button>
+        <button onClick={recordWebcam.stop}>Arreter</button>
+        <button onClick={recordWebcam.retake}>Relancer</button>
+        <button onClick={recordWebcam.download}>Telecharger</button>
       </div>
     </Main>
   );
