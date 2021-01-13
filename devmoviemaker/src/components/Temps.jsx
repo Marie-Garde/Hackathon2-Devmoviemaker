@@ -16,19 +16,22 @@ import {
   Input,
 } from "../styled-components/Temps.js";
 
-export default function Temps(props) {
-  const [number, setNumber] = useState(-1);
-
-  function handleNumberChange(e) {
+export default function Temps() {
+  const [number, setNumber] = useState(0);
+  console.log(number);
+  const handleNumberChange = (e) => {
     setNumber(e.target.value);
-    console.log(number);
-  }
+  };
+
+  const handleForm = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <Background>
       <FlexBox1>
-        <Flex1>
-          <Formulaire>
+        <Flex1 number={number}>
+          <Formulaire onSubmit={() => handleForm}>
             <DivLabel>
               <Label>Durée :</Label>
               <Input
@@ -36,7 +39,6 @@ export default function Temps(props) {
                 name="number"
                 id={number}
                 placeholder="0"
-                value={number}
                 onChange={handleNumberChange}
               />
             </DivLabel>
