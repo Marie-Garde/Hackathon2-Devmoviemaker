@@ -9,13 +9,13 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import logo from "../photos/logo.svg";
 import { MainDiv, Img, DivButton } from "../styled-components/Stepper";
+import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    
     width: "80%",
     height: "50%",
-    paddingLeft : "10%"
+    paddingLeft: "10%",
   },
   button: {
     marginTop: theme.spacing(1),
@@ -28,16 +28,16 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   texte: {
-   color : "blue",
+    color: "blue",
   },
 }));
 
 function getSteps() {
   return [
-    "Présentation",
-    "Conseils de mise en place",
-    "Répartition du temps d'enregistrement",
-    "Enregistrement",
+    { title: "Présentation", action: "HOME" },
+    { title: "Conseils de mise en place", action: "ADVICES" },
+    { title: "Répartition du temps d'enregistrement", action: "TIME" },
+    { title: "Enregistrement", action: "RECORD" },
   ];
 }
 
@@ -56,13 +56,11 @@ function getStepContent(step) {
 }
 
 export default function VerticalLinearStepper() {
+  const dispatch = useDispatch();
+
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -72,16 +70,21 @@ export default function VerticalLinearStepper() {
     setActiveStep(0);
   };
 
+  const Test = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    dispatch({ type: getSteps()[activeStep].action });
+  };
+
   return (
     <MainDiv>
       <Img src={logo} alt="" />
       <div className={classes.root}>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => (
-            <Step key={label}>
-              <StepLabel className={classes.texte}>{label}</StepLabel>
+            <Step key={label.title}>
+              <StepLabel className={classes.texte}>{label.title}</StepLabel>
               <StepContent>
-                <Typography >{getStepContent(index)}</Typography>
+                <Typography>{getStepContent(index)}</Typography>
               </StepContent>
             </Step>
           ))}
@@ -94,12 +97,8 @@ export default function VerticalLinearStepper() {
             </Button>
           </Paper>
         )}
-        
+
         <div className={classes.actionsContainer}>
-          
-          
-          
-          
           <DivButton>
             <Button
               disabled={activeStep === 0}
@@ -111,7 +110,7 @@ export default function VerticalLinearStepper() {
             <Button
               variant="contained"
               color="primary"
-              onClick={handleNext}
+              onClick={Test}
               className={classes.button}
             >
               {activeStep === steps.length - 1 ? "Terminé" : "Suivant"}
