@@ -12,6 +12,7 @@ const breakPoints = [
 
 function Slider () {
   return (
+    <div className="Container">
     <div className="App">
       <Carousel breakPoints={breakPoints}>
         <Item>Rédiger un script/scénario reflétant votre parcours, <br></br>et écrivez-le !</Item>
@@ -25,6 +26,7 @@ function Slider () {
         <Item>Entraînez-vous jusqu’à trouver le bon équilibre et la bonne fluidité</Item>
         <Item>Vous avez entre 1mn et 1mn30 pour être impactant(e) </Item>
       </Carousel>
+    </div>
     </div>
   );
 }

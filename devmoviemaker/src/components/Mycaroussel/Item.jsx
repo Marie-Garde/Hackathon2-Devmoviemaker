@@ -8,8 +8,8 @@ export default styled.div`
   text-align: center;
   padding: 5px 8px 5px 8px;
   line-height: 2em;
-  background-color: #0e2a47;
+  background-color: #2765a7;
   color: #fff;
-  margin: 5px;
+  margin: 10px;
   font-size: 1.2em;
 `;
