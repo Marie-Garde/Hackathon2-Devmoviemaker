@@ -1,45 +1,51 @@
 import { useRecordWebcam } from "react-record-webcam";
-import { Main } from "../styles/Webcam";
+import { Main, TotalPage, Background } from "../styles/Webcam";
 import noSignal from "../assets/images/noSignal.jpg";
+import Prompteur from "./Prompteur";
 
 const Webcam = () => {
   const recordWebcam = useRecordWebcam();
   return (
-    <Main>
-      <div>
-        <p>Statut de la caméra : {recordWebcam.status}</p>
-        {recordWebcam.status !== "CLOSED" ? (
+    <Background>
+      <TotalPage>
+        <Main>
           <div>
-            {recordWebcam.status === "PREVIEW" ? (
-              <video ref={recordWebcam.previewRef} autoPlay muted loop />
+            <p>Statut de la caméra : {recordWebcam.status}</p>
+            {recordWebcam.status !== "CLOSED" ? (
+              <div>
+                {recordWebcam.status === "PREVIEW" ? (
+                  <video ref={recordWebcam.previewRef} autoPlay muted loop />
+                ) : (
+                  <video ref={recordWebcam.webcamRef} autoPlay muted />
+                )}
+              </div>
             ) : (
-              <video ref={recordWebcam.webcamRef} autoPlay muted />
+              <div>
+                <img src={noSignal} alt="no signal" />
+              </div>
             )}
           </div>
-        ) : (
           <div>
-            <img src={noSignal} alt="no signal" />
+            <button onClick={recordWebcam.open} title="Démarrer la webcam">
+              <i className="fas fa-video"></i>
+            </button>
+            <button onClick={recordWebcam.start} title="Enregistrer">
+              <i className="fas fa-play"></i>
+            </button>
+            <button onClick={recordWebcam.stop} title="Stop">
+              <i className="fas fa-stop"></i>
+            </button>
+            <button onClick={recordWebcam.retake} title="Relancer">
+              <i className="fas fa-sync-alt"></i>
+            </button>
+            <button onClick={recordWebcam.download} title="Télécharger">
+              <i className="fas fa-cloud-download-alt"></i>
+            </button>
           </div>
-        )}
-      </div>
-      <div>
-        <button onClick={recordWebcam.open} title="Démarrer la webcam">
-          <i className="fas fa-video"></i>
-        </button>
-        <button onClick={recordWebcam.start} title="Enregistrer">
-          <i className="fas fa-play"></i>
-        </button>
-        <button onClick={recordWebcam.stop} title="Stop">
-          <i className="fas fa-stop"></i>
-        </button>
-        <button onClick={recordWebcam.retake} title="Relancer">
-          <i className="fas fa-sync-alt"></i>
-        </button>
-        <button onClick={recordWebcam.download} title="Télécharger">
-          <i className="fas fa-cloud-download-alt"></i>
-        </button>
-      </div>
-    </Main>
+        </Main>
+        <Prompteur />
+      </TotalPage>
+    </Background>
   );
 };
 
