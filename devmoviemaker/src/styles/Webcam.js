@@ -39,5 +39,8 @@ export const Main = styled.div`
     &:hover {
       transform: scale(1.1);
     }
+    &:focus {
+      background: rgba(0, 0, 0, 0.4);
+    }
   }
 `;
