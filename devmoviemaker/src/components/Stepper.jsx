@@ -59,7 +59,7 @@ export default function VerticalLinearStepper() {
   const dispatch = useDispatch();
 
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(1);
   const steps = getSteps();
 
   const handleBack = () => {
@@ -113,6 +113,7 @@ export default function VerticalLinearStepper() {
               color="primary"
               onClick={Test}
               className={classes.button}
+              disabled={activeStep === steps.length}
             >
               {activeStep === steps.length - 1 ? "Terminé" : "Suivant"}
             </Button>
