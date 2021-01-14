@@ -13,6 +13,7 @@ import {
   ContainerFlex1,
   Formulaire,
   Formulaire2,
+  Formulaire3,
   DivLabel,
   Label,
   Input,
@@ -28,21 +29,64 @@ export default function Temps() {
     flex5: 0,
   });
 
-  const [text, setText] = useState([]);
+  const [text, setText] = useState({
+    textflex1: "",
+    array1: [],
+    textflex2: "",
+    array2: [],
+    textflex3: "",
+    array3: [],
+    textflex4: "",
+    array4: [],
+    textflex5: "",
+    array5: [],
+  });
 
   const handleNumberChange = (e) => {
     setNumber({ ...number, [e.target.name]: e.target.value });
   };
 
-  const handleTextSubmit = (e) => {
-    console.log("bwah");
-    console.log(text);
+  const handleTextChange = (e) => {
+    setText({ ...text, [e.target.name]: e.target.value });
   };
 
-  console.log(text);
+  const handleTextSubmit = (e) => {
+    e.preventDefault();
+    text.array1.push(text.textflex1);
+    setText({ ...text, textflex1: "" });
+    console.log(text.array1);
+  };
+
+  const handleTextSubmit2 = (e) => {
+    e.preventDefault();
+    text.array2.push(text.textflex2);
+    setText({ ...text, textflex2: "" });
+    console.log(text.array2);
+  };
+
+  const handleTextSubmit3 = (e) => {
+    e.preventDefault();
+    text.array3.push(text.textflex3);
+    setText({ ...text, textflex3: "" });
+    console.log(text.array3);
+  };
+
+  const handleTextSubmit4 = (e) => {
+    e.preventDefault();
+    text.array4.push(text.textflex4);
+    setText({ ...text, textflex4: "" });
+    console.log(text.array4);
+  };
+
+  const handleTextSubmit5 = (e) => {
+    e.preventDefault();
+    text.array5.push(text.textflex5);
+    setText({ ...text, textflex5: "" });
+    console.log(text.array5);
+  };
+
   const handleForm = (e) => {
     e.preventDefault();
-    console.log("bwah");
   };
 
   return (
@@ -70,15 +114,16 @@ export default function Temps() {
                 />
               </DivLabel>
             </Formulaire>
-            <Formulaire2>
+            <Formulaire2 onSubmit={handleTextSubmit}>
               <DivLabel>
                 <Label>Mots clefs :</Label>
                 <Input
                   type="text"
-                  name="flex1"
+                  name="textflex1"
                   id={text.flex1}
                   placeholder="mots clefs"
-                  onSubmit={() => handleTextSubmit}
+                  value={text.textflex1}
+                  onChange={handleTextChange}
                 />
               </DivLabel>
             </Formulaire2>
@@ -102,6 +147,19 @@ export default function Temps() {
                 />
               </DivLabel>
             </Formulaire>
+            <Formulaire2 onSubmit={handleTextSubmit2}>
+              <DivLabel>
+                <Label>Mots clefs :</Label>
+                <Input
+                  type="text"
+                  name="textflex2"
+                  id={text.flex2}
+                  placeholder="mots clefs"
+                  value={text.textflex2}
+                  onChange={handleTextChange}
+                />
+              </DivLabel>
+            </Formulaire2>
           </Flex2>
         </ContainerFlex1>
         <ContainerFlex1>
@@ -122,6 +180,19 @@ export default function Temps() {
                 />
               </DivLabel>
             </Formulaire>
+            <Formulaire2 onSubmit={handleTextSubmit3}>
+              <DivLabel>
+                <Label>Mots clefs :</Label>
+                <Input
+                  type="text"
+                  name="textflex3"
+                  id={text.flex3}
+                  placeholder="mots clefs"
+                  value={text.textflex3}
+                  onChange={handleTextChange}
+                />
+              </DivLabel>
+            </Formulaire2>
           </Flex3>
         </ContainerFlex1>
       </FlexBox1>
@@ -148,6 +219,19 @@ export default function Temps() {
                 />
               </DivLabel>
             </Formulaire>
+            <Formulaire2 onSubmit={handleTextSubmit4}>
+              <DivLabel>
+                <Label>Mots clefs :</Label>
+                <Input
+                  type="text"
+                  name="textflex4"
+                  id={text.flex4}
+                  placeholder="mots clefs"
+                  value={text.textflex4}
+                  onChange={handleTextChange}
+                />
+              </DivLabel>
+            </Formulaire2>
           </Flex4>
         </ContainerFlex1>
         <ContainerFlex1>
@@ -168,6 +252,19 @@ export default function Temps() {
                 />
               </DivLabel>
             </Formulaire>
+            <Formulaire2 onSubmit={handleTextSubmit5}>
+              <DivLabel>
+                <Label>Mots clefs :</Label>
+                <Input
+                  type="text"
+                  name="textflex5"
+                  id={text.flex5}
+                  placeholder="mots clefs"
+                  value={text.textflex5}
+                  onChange={handleTextChange}
+                />
+              </DivLabel>
+            </Formulaire2>
           </Flex5>
         </ContainerFlex1>
         <Flex6>Wesh thomas</Flex6>

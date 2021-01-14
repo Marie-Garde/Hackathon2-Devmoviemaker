@@ -34,6 +34,7 @@ export const ContainerFlex1 = styled.div `
 
 export const Flex1 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex1 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -43,6 +44,7 @@ export const Flex1 = styled.div `
 
 export const Flex2 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex2 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -52,6 +54,7 @@ export const Flex2 = styled.div `
 
 export const Flex3 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex3 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -61,6 +64,7 @@ export const Flex3 = styled.div `
 
 export const Flex4 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex4 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -70,6 +74,7 @@ export const Flex4 = styled.div `
 
 export const Flex5 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex5 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -88,7 +93,7 @@ export const Formulaire = styled.div `
   flex-direction: column;
 `;
 
-export const Formulaire2 = styled.div `
+export const Formulaire2 = styled.form `
   display: flex;
   flex-direction: column;
 `;
