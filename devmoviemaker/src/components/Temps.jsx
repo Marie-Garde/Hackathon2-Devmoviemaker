@@ -13,11 +13,11 @@ import {
   ContainerFlex1,
   Formulaire,
   Formulaire2,
-  Formulaire3,
   DivLabel,
   Label,
   Input,
   InputTitle,
+  Li,
 } from "../styled-components/Temps.js";
 
 export default function Temps() {
@@ -126,6 +126,11 @@ export default function Temps() {
                   onChange={handleTextChange}
                 />
               </DivLabel>
+              <ul>
+                {text.array1.map((item) => (
+                  <Li>{item}</Li>
+                ))}
+              </ul>
             </Formulaire2>
           </Flex1>
         </ContainerFlex1>
@@ -159,6 +164,11 @@ export default function Temps() {
                   onChange={handleTextChange}
                 />
               </DivLabel>
+              <ul>
+                {text.array2.map((item) => (
+                  <Li>{item}</Li>
+                ))}
+              </ul>
             </Formulaire2>
           </Flex2>
         </ContainerFlex1>
@@ -192,6 +202,11 @@ export default function Temps() {
                   onChange={handleTextChange}
                 />
               </DivLabel>
+              <ul>
+                {text.array3.map((item) => (
+                  <Li>{item}</Li>
+                ))}
+              </ul>
             </Formulaire2>
           </Flex3>
         </ContainerFlex1>
@@ -231,6 +246,11 @@ export default function Temps() {
                   onChange={handleTextChange}
                 />
               </DivLabel>
+              <ul>
+                {text.array4.map((item) => (
+                  <Li>{item}</Li>
+                ))}
+              </ul>
             </Formulaire2>
           </Flex4>
         </ContainerFlex1>
@@ -264,6 +284,11 @@ export default function Temps() {
                   onChange={handleTextChange}
                 />
               </DivLabel>
+              <ul>
+                {text.array5.map((item) => (
+                  <Li>{item}</Li>
+                ))}
+              </ul>
             </Formulaire2>
           </Flex5>
         </ContainerFlex1>

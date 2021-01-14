@@ -11,6 +11,7 @@ function App() {
   return (
     <div>
       <Reset />
+      <VerticalLinearStepper />
       <Temps />
     </div>
   );
