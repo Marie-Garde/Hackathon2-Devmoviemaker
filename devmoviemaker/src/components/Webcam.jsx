@@ -24,19 +24,19 @@ const Webcam = () => {
       </div>
       <div>
         <button onClick={recordWebcam.open}>
-          <i class="fas fa-video"></i>
+          <i className="fas fa-video"></i>
         </button>
         <button onClick={recordWebcam.start}>
-          <i class="fas fa-play"></i>
+          <i className="fas fa-play"></i>
         </button>
         <button onClick={recordWebcam.stop}>
-          <i class="fas fa-stop"></i>
+          <i className="fas fa-stop"></i>
         </button>
         <button onClick={recordWebcam.retake}>
-          <i class="fas fa-sync-alt"></i>
+          <i className="fas fa-sync-alt"></i>
         </button>
         <button onClick={recordWebcam.download}>
-          <i class="fas fa-cloud-download-alt"></i>
+          <i className="fas fa-cloud-download-alt"></i>
         </button>
       </div>
     </Main>
