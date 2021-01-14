@@ -1,6 +1,7 @@
 import { Reset } from "styled-reset";
 import Temps from "./components/Temps";
 import PagePresentation from "./components/PagePresentation";
+import Caroussel from "./components/Mycaroussel/Caroussel";
 import VerticalLinearStepper from "./components/Stepper";
 import Webcam from "./components/Webcam";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +14,7 @@ function App() {
     if (page === "home") {
       return <PagePresentation />;
     } else if (page === "advices") {
-      return <Slider />;
+      return <Caroussel />;
     } else if (page === "time") {
       return <Temps />;
     } else if (page === "record") {
@@ -27,8 +28,8 @@ function App() {
     <div>
       <Reset />
       <VerticalLinearStepper />
-      <button onClick={() => dispatch({ type: "RECORD" })}>Mets ta cam!</button>
       {renderPage()}
+      <button onClick={() => dispatch({ type: "RECORD" })}>Mets ta cam!</button>
     </div>
   );
 }
