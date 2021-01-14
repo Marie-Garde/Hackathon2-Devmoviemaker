@@ -68,11 +68,12 @@ export default function VerticalLinearStepper() {
 
   const handleReset = () => {
     setActiveStep(0);
+    dispatch({ type: "HOME" });
   };
 
   const Test = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    dispatch({ type: getSteps()[activeStep + 1].action });
+    dispatch({ type: getSteps()[activeStep].action });
   };
 
   return (
