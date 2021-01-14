@@ -11,19 +11,19 @@ export const FlexBox1 = styled.div `
   justify-content: space-around;
   margin-bottom: 5vh;
   padding-top: 7vh;
-  margin-left: 20vh;
+  margin-left: 38vh;
 `;
 
 export const FlexBox2 = styled.div `
   display: flex;
   justify-content: space-around;
-  margin-left: 20vh;
+  margin-left: 38vh;
 `;
 
 export const ContainerFlex1 = styled.div `
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 22.4%;
   height: 40vh;
   background-color: #4575a6;
   border-radius: 15px;
@@ -34,6 +34,7 @@ export const ContainerFlex1 = styled.div `
 
 export const Flex1 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex1 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -43,6 +44,7 @@ export const Flex1 = styled.div `
 
 export const Flex2 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex2 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -52,6 +54,7 @@ export const Flex2 = styled.div `
 
 export const Flex3 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex3 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -61,6 +64,7 @@ export const Flex3 = styled.div `
 
 export const Flex4 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex4 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -70,6 +74,7 @@ export const Flex4 = styled.div `
 
 export const Flex5 = styled.div `
   display: flex;
+  flex-direction: column;
   background-color: #8daccc;
   width: ${(id) => (id.number.flex5 !== 0 ? 0 + id.number * 2.28 : 0)}px;
   height: 100%;
@@ -79,17 +84,23 @@ export const Flex5 = styled.div `
 
 export const Flex6 = styled.div `
   display: flex;
-  width: 20%;
+  width: 22.4%;
   height: 40vh;
 `;
 
 export const Formulaire = styled.div `
   display: flex;
+  flex-direction: column;
+`;
+
+export const Formulaire2 = styled.form `
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 `;
 
 export const DivLabel = styled.div `
   width: 18vw;
-  text-align: start;
   height: 7vh;
   text-align: center;
 `;
@@ -97,6 +108,7 @@ export const DivLabel = styled.div `
 export const Label = styled.h1 `
   font-size: 1rem;
   width: 100%;
+  font-family: "Rambla";
 `;
 
 export const Input = styled.input `
@@ -112,9 +124,18 @@ export const InputTitle = styled.input `
   width: 100%;
   border: none;
   outline: none;
+  font-family: "Capriola";
   background-color: transparent;
   border-bottom: 1px solid #070645;
   margin-top: 2vh;
   font-size: 1.3rem;
   text-align: center;
+`;
+
+export const Li = styled.li `
+  list-style-type: square;
+  width: 10vw;
+  list-style: inside;
+  font-family: "Rambla";
+  padding-left: 1.4vw;
 `;
