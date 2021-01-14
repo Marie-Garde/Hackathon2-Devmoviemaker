@@ -20,7 +20,7 @@ function App() {
     } else if (page === "record") {
       return <Webcam />;
     } else {
-      return <p>toto</p>;
+      return <p>something bad happened</p>;
     }
   };
 
