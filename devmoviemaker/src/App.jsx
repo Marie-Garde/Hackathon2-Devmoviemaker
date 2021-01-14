@@ -4,7 +4,11 @@ import PagePresentation from "./components/PagePresentation";
 import Caroussel from "./components/Mycaroussel/Caroussel";
 import VerticalLinearStepper from "./components/Stepper";
 import Webcam from "./components/Webcam";
+import Slider from "./components/Mycaroussel/Caroussel"
+import TimeCard from "./components/Mytimeline/TimeCard"
+import Progress from "./components/Mytimeline/index"
 import { useSelector, useDispatch } from "react-redux";
+
 
 function App() {
   const { page } = useSelector((state) => state.menuReducer);
