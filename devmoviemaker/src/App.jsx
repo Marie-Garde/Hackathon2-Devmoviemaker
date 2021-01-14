@@ -5,6 +5,7 @@ import VerticalLinearStepper from "./components/Stepper";
 import Webcam from "./components/Webcam";
 import Slider from "./components/Mycaroussel/Caroussel"
 import TimeCard from "./components/Mytimeline/TimeCard"
+import Progress from "./components/Mytimeline/index"
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Temps />
       <VerticalLinearStepper/>
       <Webcam />
-      <TimeCard />
+      <Progress timetotal={50}/>
     </div>
   );
 }
