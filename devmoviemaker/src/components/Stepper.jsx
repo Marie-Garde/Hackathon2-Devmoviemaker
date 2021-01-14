@@ -115,7 +115,7 @@ export default function VerticalLinearStepper() {
               className={classes.button}
               disabled={activeStep === steps.length}
             >
-              {activeStep === steps.length - 1 ? "Terminé" : "Suivant"}
+              {activeStep === steps.length ? "Terminé" : "Suivant"}
             </Button>
           </DivButton>
         </div>
