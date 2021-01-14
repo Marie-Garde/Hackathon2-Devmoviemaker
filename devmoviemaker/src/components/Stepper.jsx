@@ -90,7 +90,7 @@ export default function VerticalLinearStepper() {
             </Step>
           ))}
         </Stepper>
-        {activeStep === steps.length && (
+        {activeStep === 3 && (
           <Paper square elevation={0} className={classes.resetContainer}>
             <Button onClick={handleReset} className={classes.button}>
               Recommencer
