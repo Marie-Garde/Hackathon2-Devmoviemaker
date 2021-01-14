@@ -1,8 +1,13 @@
 import { useRecordWebcam } from "react-record-webcam";
 import { Main } from "../styles/Webcam";
 import noSignal from "../assets/images/noSignal.jpg";
+import Progress from "./Mytimeline/index";
+import { useSelector } from "react-redux";
 
 const Webcam = () => {
+  const { time } = useSelector((state) => state.timeReducer);
+  console.log(time);
+
   const recordWebcam = useRecordWebcam();
   return (
     <Main>
@@ -39,6 +44,7 @@ const Webcam = () => {
           <i className="fas fa-cloud-download-alt"></i>
         </button>
       </div>
+      <Progress time={time} />
     </Main>
   );
 };
