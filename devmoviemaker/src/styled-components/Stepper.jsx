@@ -6,7 +6,7 @@ position : absolute;
 top: 0vh`;
 
 export const Img = styled.img`
-padding-top : 3vh;
+padding-top : 5vh;
 padding-left : 3vh;
 padding-bottom : 20vh;
 width : 38vh;
