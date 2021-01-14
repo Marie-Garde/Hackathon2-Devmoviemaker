@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-export default function Convert() {
+import { Label, P, Border } from "../styled-components/Convertisseur";
+
+export default function Convert({ totalTime }) {
   const [seconde, setSeconde] = useState(0);
   const [minute, setMinute] = useState(0);
 
-  const handleChange = (e) => {
-    setSeconde(e.target.value);
-  };
-
   useEffect(() => {
-    setMinute(Math.floor(seconde / 60));
-  }, [seconde]);
+    setMinute(Math.floor(totalTime / 60));
+  }, [totalTime]);
 
   return (
-    <div>
-      <label htmlFor="">Seconde de base :</label>
-      <input type="number" value={seconde} onChange={handleChange}></input>
-      <button>Convertir</button>
-      <p> {minute} </p>
-      <p>{seconde % 60}</p>
-    </div>
+    <Border>
+      <Label>Temps de votre présentation :</Label>
+      <P>
+        {" "}
+        {minute} min(s) et {totalTime % 60} seconde(s)
+      </P>
+    </Border>
   );
 }
