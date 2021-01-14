@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
@@ -59,22 +59,25 @@ export default function VerticalLinearStepper() {
   const dispatch = useDispatch();
 
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(1);
+  const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setActiveStep(activeStep - 1);
   };
 
   const handleReset = () => {
     setActiveStep(0);
-    dispatch({ type: "HOME" });
   };
 
-  const Test = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    dispatch({ type: getSteps()[activeStep].action });
+  const handleNext = () => {
+    setActiveStep(activeStep + 1);
   };
+
+  useEffect(() => {
+    console.log(activeStep);
+    dispatch({ type: getSteps()[activeStep].action });
+  }, [dispatch, activeStep]);
 
   return (
     <MainDiv>
@@ -84,15 +87,11 @@ export default function VerticalLinearStepper() {
           {steps.map((label, index) => (
             <Step key={label.title}>
               <StepLabel className={classes.texte}>{label.title}</StepLabel>
-              <StepContent>
-                <Typography>{getStepContent(index)}</Typography>
-              </StepContent>
             </Step>
           ))}
         </Stepper>
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
-            <Typography></Typography>
             <Button onClick={handleReset} className={classes.button}>
               Recommencer
             </Button>
@@ -111,7 +110,7 @@ export default function VerticalLinearStepper() {
             <Button
               variant="contained"
               color="primary"
-              onClick={Test}
+              onClick={handleNext}
               className={classes.button}
               disabled={activeStep === steps.length}
             >
