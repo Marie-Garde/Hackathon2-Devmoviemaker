@@ -72,7 +72,7 @@ export default function VerticalLinearStepper() {
 
   const Test = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    dispatch({ type: getSteps()[activeStep].action });
+    dispatch({ type: getSteps()[activeStep + 1].action });
   };
 
   return (
