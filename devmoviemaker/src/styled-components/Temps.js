@@ -85,11 +85,16 @@ export const Flex6 = styled.div `
 
 export const Formulaire = styled.div `
   display: flex;
+  flex-direction: column;
+`;
+
+export const Formulaire2 = styled.div `
+  display: flex;
+  flex-direction: column;
 `;
 
 export const DivLabel = styled.div `
   width: 18vw;
-  text-align: start;
   height: 7vh;
   text-align: center;
 `;

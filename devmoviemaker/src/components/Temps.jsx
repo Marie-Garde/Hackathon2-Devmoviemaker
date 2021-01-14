@@ -12,6 +12,7 @@ import {
   Flex6,
   ContainerFlex1,
   Formulaire,
+  Formulaire2,
   DivLabel,
   Label,
   Input,
@@ -26,13 +27,22 @@ export default function Temps() {
     flex4: 0,
     flex5: 0,
   });
-  console.log(number);
+
+  const [text, setText] = useState([]);
+
   const handleNumberChange = (e) => {
     setNumber({ ...number, [e.target.name]: e.target.value });
   };
 
+  const handleTextSubmit = (e) => {
+    console.log("bwah");
+    console.log(text);
+  };
+
+  console.log(text);
   const handleForm = (e) => {
     e.preventDefault();
+    console.log("bwah");
   };
 
   return (
@@ -60,6 +70,18 @@ export default function Temps() {
                 />
               </DivLabel>
             </Formulaire>
+            <Formulaire2>
+              <DivLabel>
+                <Label>Mots clefs :</Label>
+                <Input
+                  type="text"
+                  name="flex1"
+                  id={text.flex1}
+                  placeholder="mots clefs"
+                  onSubmit={() => handleTextSubmit}
+                />
+              </DivLabel>
+            </Formulaire2>
           </Flex1>
         </ContainerFlex1>
         <ContainerFlex1>
