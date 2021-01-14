@@ -1,4 +1,8 @@
 import { Reset } from "styled-reset";
+
+import Temps from "./components/Temps";
+
+import PagePresentation from "./components/PagePresentation";
 import VerticalLinearStepper from "./components/Stepper";
 import Webcam from "./components/Webcam";
 import { useSelector, useDispatch } from "react-redux";
@@ -24,9 +28,11 @@ function App() {
   return (
     <div>
       <Reset />
+      <Slider />
       <button onClick={() => dispatch({ type: "RECORD" })}>Mets ta cam!</button>
       <VerticalLinearStepper />
       <Webcam />
+      <Temps />
       {renderPage()}
     </div>
   );
