@@ -4,7 +4,7 @@ import PagePresentation from "./components/PagePresentation";
 import Caroussel from "./components/Mycaroussel/Caroussel";
 import VerticalLinearStepper from "./components/Stepper";
 import Webcam from "./components/Webcam";
-import { useSelector, useDispatch } from "react-redux";
+import Slider from "./components/Mycaroussel/Caroussel";
 
 function App() {
   const { page } = useSelector((state) => state.menuReducer);
@@ -29,7 +29,6 @@ function App() {
       <Reset />
       <VerticalLinearStepper />
       {renderPage()}
-      <button onClick={() => dispatch({ type: "RECORD" })}>Mets ta cam!</button>
     </div>
   );
 }
