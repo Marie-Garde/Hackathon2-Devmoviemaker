@@ -36,3 +36,10 @@ export const BebeFlex5 = styled.div`
   height: 20vh;
   background-color: #941a1a;
 `;
+
+export const H2Flex = styled.div`
+color : white;
+text-align : center;
+padding-top : 2vh;
+font-size : 1.8rem;
+`
