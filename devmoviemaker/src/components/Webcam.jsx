@@ -4,9 +4,11 @@ import noSignal from "../assets/images/noSignal.jpg";
 import Progress from "./Mytimeline/index";
 import { useSelector } from "react-redux";
 import Prompteur from "./Prompteur";
+import { useState } from "react";
 
 const Webcam = () => {
   const { time } = useSelector((state) => state.timeReducer);
+  const [isOpen, setIsOpen] = useState(false);
 
   const recordWebcam = useRecordWebcam();
   return (
@@ -33,10 +35,22 @@ const Webcam = () => {
             <button onClick={recordWebcam.open} title="Démarrer la webcam">
               <i className="fas fa-video"></i>
             </button>
-            <button onClick={recordWebcam.start} title="Enregistrer">
+            <button
+              onClick={() => {
+                recordWebcam.start();
+                setIsOpen(true);
+              }}
+              title="Enregistrer"
+            >
               <i className="fas fa-play"></i>
             </button>
-            <button onClick={recordWebcam.stop} title="Stop">
+            <button
+              onClick={() => {
+                recordWebcam.stop();
+                setIsOpen(false);
+              }}
+              title="Stop"
+            >
               <i className="fas fa-stop"></i>
             </button>
             <button onClick={recordWebcam.retake} title="Relancer">
@@ -49,8 +63,7 @@ const Webcam = () => {
           <Progress time={time} />
 
         </Main>
-        <div>
-        </div>
+        <div>{isOpen && <Progress time={time} />}</div>
         <Prompteur />
       </TotalPage>
     </Background>

@@ -13,7 +13,8 @@ import {
 
 export default function Prompteur() {
   const { word } = useSelector((state) => state.prompReducer);
-  console.log(word);
+  const { splitTime } = useSelector((state) => state.splitTimeReducer);
+
   return (
     <FlexBox>
       <BebeFlex1>
