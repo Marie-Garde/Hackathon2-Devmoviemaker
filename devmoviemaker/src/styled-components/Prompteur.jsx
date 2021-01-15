@@ -45,12 +45,15 @@ export const BebeFlex5 = styled.div`
 
 export const H2Flex = styled.h2`
   font-family: "Capriola";
-  color: white;
+  color: #B6D1C5;
   text-align: center;
   padding-top: 2vh;
   font-size: 1.5rem;
+  padding-bottom : 1.7vh;
 `;
 
 export const KeyWord = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  color : white;
+  padding-left : 2vh;
 `;
