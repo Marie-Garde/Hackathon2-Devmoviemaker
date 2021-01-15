@@ -11,14 +11,18 @@ export const FlexBox = styled.div`
 export const BebeFlex1 = styled.div`
   width: 20vw;
   height: 20vh;
-  background-color: #4575a6;
+  background-color: ${({ color, ellapsed }) =>
+    ellapsed < color ? "#4575a6" : "#2b4866"};
   border: 0.2rem solid;
 `;
 
 export const BebeFlex2 = styled.div`
   width: 20vw;
   height: 20vh;
-  background-color: #2b4866;
+  background-color: ${({ color1, color2, ellapsed }) =>
+    (ellapsed > 0 && ellapsed < color1 && "#2b4866") ||
+    (ellapsed > color1 && ellapsed < color2 && "#4575a6") ||
+    (ellapsed > color2 && "#2b4866")};
   border: 0.2rem solid;
 `;
 

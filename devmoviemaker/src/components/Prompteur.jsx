@@ -14,10 +14,11 @@ import {
 export default function Prompteur() {
   const { word } = useSelector((state) => state.prompReducer);
   const { splitTime } = useSelector((state) => state.splitTimeReducer);
+  const { ellapsed } = useSelector((state) => state.ellapsedReducer);
 
   return (
     <FlexBox>
-      <BebeFlex1>
+      <BebeFlex1 color={parseInt(splitTime[0])} ellapsed={ellapsed}>
         <H2Flex>Présentation</H2Flex>
         <KeyWord>
           {word[0].map((key) => {
@@ -25,7 +26,11 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex1>
-      <BebeFlex2>
+      <BebeFlex2
+        color1={parseInt(splitTime[0])}
+        color2={parseInt(splitTime[1])}
+        ellapsed={ellapsed}
+      >
         <H2Flex>Lorem Ipsum</H2Flex>
         <KeyWord>
           {word[1].map((key) => {
@@ -33,7 +38,7 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex2>
-      <BebeFlex3>
+      <BebeFlex3 color={splitTime[2]}>
         <H2Flex>Lorel Ipsum</H2Flex>
         <KeyWord>
           {word[2].map((key) => {
@@ -41,7 +46,7 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex3>
-      <BebeFlex4>
+      <BebeFlex4 color={splitTime[3]}>
         <H2Flex>Lorem Ipsum</H2Flex>
         <KeyWord>
           {word[3].map((key) => {
@@ -49,7 +54,7 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex4>
-      <BebeFlex5>
+      <BebeFlex5 color={splitTime[4]}>
         <H2Flex>Lorem Ipsum</H2Flex>
         <KeyWord>
           {word[4].map((key) => {
