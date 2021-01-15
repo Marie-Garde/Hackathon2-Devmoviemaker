@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Convert from "./Convertisseur";
 
 import {
   Background,
@@ -88,6 +89,13 @@ export default function Temps() {
   const handleForm = (e) => {
     e.preventDefault();
   };
+
+  const totalTime =
+    parseInt(number.flex1) +
+    parseInt(number.flex2) +
+    parseInt(number.flex3) +
+    parseInt(number.flex4) +
+    parseInt(number.flex5);
 
   return (
     <Background>
@@ -292,7 +300,9 @@ export default function Temps() {
             </Formulaire2>
           </Flex5>
         </ContainerFlex1>
-        <Flex6>Wesh thomas</Flex6>
+        <Flex6>
+          <Convert totalTime={totalTime} />
+        </Flex6>
       </FlexBox2>
     </Background>
   );
