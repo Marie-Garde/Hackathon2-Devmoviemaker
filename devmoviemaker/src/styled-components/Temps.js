@@ -109,6 +109,7 @@ export const Label = styled.h1 `
   font-size: 1rem;
   width: 100%;
   font-family: "Rambla";
+  color : white
 `;
 
 export const Input = styled.input `
@@ -127,9 +128,12 @@ export const InputTitle = styled.input `
   font-family: "Capriola";
   background-color: transparent;
   border-bottom: 1px solid #070645;
-  margin-top: 2vh;
+  margin-top: 1vh;
   font-size: 1.3rem;
   text-align: center;
+  color : white;
+  padding-bottom : 1vh;
+  font-weight : bold;
 `;
 
 export const Li = styled.li `

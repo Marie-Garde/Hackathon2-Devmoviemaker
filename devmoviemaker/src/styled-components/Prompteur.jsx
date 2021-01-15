@@ -43,7 +43,8 @@ export const BebeFlex5 = styled.div`
   border: 0.2rem solid;
 `;
 
-export const H2Flex = styled.div`
+export const H2Flex = styled.h2`
+  font-family: "Capriola";
   color: white;
   text-align: center;
   padding-top: 2vh;
