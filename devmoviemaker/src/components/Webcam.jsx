@@ -48,6 +48,10 @@ const Webcam = () => {
             </button>
           </div>
         </Main>
+        <div>
+          <button>Start</button>
+          <Progress />
+        </div>
         <Prompteur />
       </TotalPage>
     </Background>
