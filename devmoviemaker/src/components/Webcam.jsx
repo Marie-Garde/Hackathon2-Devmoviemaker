@@ -37,14 +37,20 @@ const Webcam = () => {
             </button>
             <button
               onClick={() => {
-                recordWebcam.retake();
+                recordWebcam.start();
                 setIsOpen(true);
               }}
               title="Enregistrer"
             >
               <i className="fas fa-play"></i>
             </button>
-            <button onClick={recordWebcam.stop} title="Stop">
+            <button
+              onClick={() => {
+                recordWebcam.stop();
+                setIsOpen(false);
+              }}
+              title="Stop"
+            >
               <i className="fas fa-stop"></i>
             </button>
             <button onClick={recordWebcam.retake} title="Relancer">
@@ -53,9 +59,10 @@ const Webcam = () => {
             <button onClick={recordWebcam.download} title="Télécharger">
               <i className="fas fa-cloud-download-alt"></i>
             </button>
+            <div>{isOpen && <Progress time={time} />}</div>
           </div>
         </Main>
-        <div>{isOpen && <Progress time={time} />}</div>
+
         <Prompteur />
       </TotalPage>
     </Background>

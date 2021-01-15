@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
 export const ProgressBar=styled.div` 
-    width: 90%;
+    width: 80vh;
     margin: 10px auto;
     height: 22px;
-    background-color: #0A5F44;
+    background-color: #49A7C4;
   `;
   
   export const Bar=styled.div `
     height: 100%;
-    text-align: right;
-    //padding: 0 10px;
+    text-align: center;
     line-height: 22px; /* same as #progressBar height if we want text middle aligned */
     width: ${props => props.progress+"%;" };
-    background-color: #CBEA00;
+    background-color: #2E6A7D;
     box-sizing: border-box;
   `;
   

@@ -10,7 +10,8 @@ export const TotalPage = styled.div `
 
 export const Main = styled.div `
   color: white;
-  padding-left: 25vw;
+  padding-left: 29vw;
+  padding-top : 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +20,7 @@ export const Main = styled.div `
 
   video {
     border-radius: 0.5em;
-    width: 40vw;
+    width: 50vw;
   }
 
   img {

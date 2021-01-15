@@ -27,12 +27,13 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex1>
+
       <BebeFlex2
         color1={parseInt(splitTime[0])}
         color2={parseInt(splitTime[0]) + parseInt(splitTime[1])}
         ellapsed={ellapsed}
       >
-        <H2Flex>Lorem Ipsum</H2Flex>
+        <H2Flex>Mes informations</H2Flex>
         <KeyWord>
           {word[1].map((key) => {
             return key;
@@ -48,7 +49,7 @@ export default function Prompteur() {
         }
         ellapsed={ellapsed}
       >
-        <H2Flex>Lorel Ipsum</H2Flex>
+        <H2Flex>Mes expériences</H2Flex>
         <KeyWord>
           {word[2].map((key) => {
             return key;
@@ -69,7 +70,7 @@ export default function Prompteur() {
         }
         ellapsed={ellapsed}
       >
-        <H2Flex>Lorem Ipsum</H2Flex>
+        <H2Flex>Mes centres d'intérêts</H2Flex>
         <KeyWord>
           {word[3].map((key) => {
             return key;
@@ -92,7 +93,7 @@ export default function Prompteur() {
         }
         ellapsed={ellapsed}
       >
-        <H2Flex>Lorem Ipsum</H2Flex>
+        <H2Flex>Pourquoi moi ?</H2Flex>
         <KeyWord>
           {word[4].map((key) => {
             return key;
