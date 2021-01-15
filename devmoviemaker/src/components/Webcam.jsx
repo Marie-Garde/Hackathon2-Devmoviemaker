@@ -47,6 +47,9 @@ const Webcam = () => {
             </button>
           </div>
         </Main>
+        <div>
+          <Progress time={time} />
+        </div>
         <Prompteur />
       </TotalPage>
     </Background>
