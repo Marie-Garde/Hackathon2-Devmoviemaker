@@ -15,7 +15,8 @@ export default function Prompteur() {
   const { word } = useSelector((state) => state.prompReducer);
   const { splitTime } = useSelector((state) => state.splitTimeReducer);
   const { ellapsed } = useSelector((state) => state.ellapsedReducer);
-
+  console.log(splitTime[1]);
+  console.log(ellapsed);
   return (
     <FlexBox>
       <BebeFlex1 color={parseInt(splitTime[0])} ellapsed={ellapsed}>
@@ -28,7 +29,7 @@ export default function Prompteur() {
       </BebeFlex1>
       <BebeFlex2
         color1={parseInt(splitTime[0])}
-        color2={parseInt(splitTime[1])}
+        color2={parseInt(splitTime[0]) + parseInt(splitTime[1])}
         ellapsed={ellapsed}
       >
         <H2Flex>Lorem Ipsum</H2Flex>
@@ -38,7 +39,15 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex2>
-      <BebeFlex3 color={splitTime[2]}>
+      <BebeFlex3
+        color1={parseInt(splitTime[0]) + parseInt(splitTime[1])}
+        color2={
+          parseInt(splitTime[0]) +
+          parseInt(splitTime[1]) +
+          parseInt(splitTime[2])
+        }
+        ellapsed={ellapsed}
+      >
         <H2Flex>Lorel Ipsum</H2Flex>
         <KeyWord>
           {word[2].map((key) => {
@@ -46,7 +55,20 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex3>
-      <BebeFlex4 color={splitTime[3]}>
+      <BebeFlex4
+        color1={
+          parseInt(splitTime[0]) +
+          parseInt(splitTime[1]) +
+          parseInt(splitTime[2])
+        }
+        color2={
+          parseInt(splitTime[0]) +
+          parseInt(splitTime[1]) +
+          parseInt(splitTime[2]) +
+          parseInt(splitTime[3])
+        }
+        ellapsed={ellapsed}
+      >
         <H2Flex>Lorem Ipsum</H2Flex>
         <KeyWord>
           {word[3].map((key) => {
@@ -54,7 +76,22 @@ export default function Prompteur() {
           })}
         </KeyWord>
       </BebeFlex4>
-      <BebeFlex5 color={splitTime[4]}>
+      <BebeFlex5
+        color1={
+          parseInt(splitTime[0]) +
+          parseInt(splitTime[1]) +
+          parseInt(splitTime[2]) +
+          parseInt(splitTime[3])
+        }
+        color2={
+          parseInt(splitTime[0]) +
+          parseInt(splitTime[1]) +
+          parseInt(splitTime[2]) +
+          parseInt(splitTime[3]) +
+          parseInt(splitTime[4])
+        }
+        ellapsed={ellapsed}
+      >
         <H2Flex>Lorem Ipsum</H2Flex>
         <KeyWord>
           {word[4].map((key) => {
