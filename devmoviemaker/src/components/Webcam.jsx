@@ -59,9 +59,10 @@ const Webcam = () => {
             <button onClick={recordWebcam.download} title="Télécharger">
               <i className="fas fa-cloud-download-alt"></i>
             </button>
+            <div>{isOpen && <Progress time={time} />}</div>
           </div>
         </Main>
-        <div>{isOpen && <Progress time={time} />}</div>
+
         <Prompteur />
       </TotalPage>
     </Background>
