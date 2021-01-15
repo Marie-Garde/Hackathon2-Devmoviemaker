@@ -37,7 +37,7 @@ const Webcam = () => {
             </button>
             <button
               onClick={() => {
-                recordWebcam.retake();
+                recordWebcam.start();
                 setIsOpen(true);
               }}
               title="Enregistrer"
