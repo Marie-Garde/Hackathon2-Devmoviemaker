@@ -22,8 +22,6 @@ import {
   Li,
 } from "../styled-components/Temps.js";
 
-import { useEffect } from "react";
-
 export default function Temps() {
   const dispatch = useDispatch();
   const { word } = useSelector((state) => state.prompReducer);
