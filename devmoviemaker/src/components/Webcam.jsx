@@ -1,9 +1,14 @@
 import { useRecordWebcam } from "react-record-webcam";
 import { Main, TotalPage, Background } from "../styles/Webcam";
 import noSignal from "../assets/images/noSignal.jpg";
+import Progress from "./Mytimeline/index";
+import { useSelector } from "react-redux";
 import Prompteur from "./Prompteur";
 
 const Webcam = () => {
+  const { time } = useSelector((state) => state.timeReducer);
+  console.log(time);
+
   const recordWebcam = useRecordWebcam();
   return (
     <Background>

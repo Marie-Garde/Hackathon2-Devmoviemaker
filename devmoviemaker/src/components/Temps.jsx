@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Convert from "./Convertisseur";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -118,6 +118,9 @@ export default function Temps() {
     parseInt(number.flex4) +
     parseInt(number.flex5);
 
+  useEffect(() => {
+    dispatch({ type: "TIME", myTime: totalTime });
+  }, [totalTime]);
   return (
     <Background>
       <FlexBox1>
