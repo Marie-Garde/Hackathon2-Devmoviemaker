@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Convert from "./Convertisseur";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   Background,
@@ -21,7 +22,12 @@ import {
   Li,
 } from "../styled-components/Temps.js";
 
+import { useEffect } from "react";
+
 export default function Temps() {
+  const dispatch = useDispatch();
+  const { word } = useSelector((state) => state.prompReducer);
+
   const [number, setNumber] = useState({
     flex1: 0,
     flex2: 0,
@@ -43,6 +49,26 @@ export default function Temps() {
     array5: [],
   });
 
+  const [arrayGlobal, setArrayGlobal] = useState([]);
+
+  const sumArray = () => {
+    let array = [];
+    array.push(text.array1);
+    array.push(text.array2);
+    array.push(text.array3);
+    array.push(text.array4);
+    array.push(text.array5);
+    setArrayGlobal(array);
+  };
+
+  useEffect(() => {
+    sumArray();
+  }, [text.array1, text.array2, text.array3, text.array4, text.array5]);
+
+  useEffect(() => {
+    dispatch({ type: "ARRAY", myWord: arrayGlobal });
+  }, [arrayGlobal]);
+
   const handleNumberChange = (e) => {
     setNumber({ ...number, [e.target.name]: e.target.value });
   };
@@ -55,35 +81,30 @@ export default function Temps() {
     e.preventDefault();
     text.array1.push(text.textflex1);
     setText({ ...text, textflex1: "" });
-    console.log(text.array1);
   };
 
   const handleTextSubmit2 = (e) => {
     e.preventDefault();
     text.array2.push(text.textflex2);
     setText({ ...text, textflex2: "" });
-    console.log(text.array2);
   };
 
   const handleTextSubmit3 = (e) => {
     e.preventDefault();
     text.array3.push(text.textflex3);
     setText({ ...text, textflex3: "" });
-    console.log(text.array3);
   };
 
   const handleTextSubmit4 = (e) => {
     e.preventDefault();
     text.array4.push(text.textflex4);
     setText({ ...text, textflex4: "" });
-    console.log(text.array4);
   };
 
   const handleTextSubmit5 = (e) => {
     e.preventDefault();
     text.array5.push(text.textflex5);
     setText({ ...text, textflex5: "" });
-    console.log(text.array5);
   };
 
   const handleForm = (e) => {
