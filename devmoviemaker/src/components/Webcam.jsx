@@ -44,7 +44,13 @@ const Webcam = () => {
             >
               <i className="fas fa-play"></i>
             </button>
-            <button onClick={recordWebcam.stop} title="Stop">
+            <button
+              onClick={() => {
+                recordWebcam.stop();
+                setIsOpen(false);
+              }}
+              title="Stop"
+            >
               <i className="fas fa-stop"></i>
             </button>
             <button onClick={recordWebcam.retake} title="Relancer">
