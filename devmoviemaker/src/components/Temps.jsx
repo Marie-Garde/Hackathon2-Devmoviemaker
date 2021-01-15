@@ -24,7 +24,6 @@ import {
 
 export default function Temps() {
   const dispatch = useDispatch();
-  const { word } = useSelector((state) => state.prompReducer);
 
   const [number, setNumber] = useState({
     flex1: 0,
@@ -66,6 +65,26 @@ export default function Temps() {
   useEffect(() => {
     dispatch({ type: "ARRAY", myWord: arrayGlobal });
   }, [arrayGlobal]);
+
+  const [splitTime, setSplitTime] = useState([]);
+
+  const sumSplitTime = () => {
+    let array = [];
+    array.push(number.flex1);
+    array.push(number.flex2);
+    array.push(number.flex3);
+    array.push(number.flex4);
+    array.push(number.flex5);
+    setSplitTime(array);
+  };
+
+  useEffect(() => {
+    sumSplitTime();
+  }, [number.flex1, number.flex2, number.flex3, number.flex4, number.flex5]);
+
+  useEffect(() => {
+    dispatch({ type: "SPLITTIME", mySplitTime: splitTime });
+  }, [splitTime]);
 
   const handleNumberChange = (e) => {
     setNumber({ ...number, [e.target.name]: e.target.value });

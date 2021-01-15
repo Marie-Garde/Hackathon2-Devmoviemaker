@@ -7,7 +7,6 @@ import Prompteur from "./Prompteur";
 
 const Webcam = () => {
   const { time } = useSelector((state) => state.timeReducer);
-  console.log(time);
 
   const recordWebcam = useRecordWebcam();
   return (
