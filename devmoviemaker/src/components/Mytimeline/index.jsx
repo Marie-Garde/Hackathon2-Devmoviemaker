@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
 import { ProgressBar, Bar } from "../../styled-components/Bar";
+import { useDispatch } from "react-redux";
 
 export default function Progress({ timeleft, timetotal, e, time }) {
-  /*
-    const progressBarWidth = timeleft * e.width() / timetotal;
-    e.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
-    if(timeleft > 0) {
-        setTimeout(function() {
-            Progress(timeleft - 1, timetotal, e);
-        }, 1000);
-    }*/
-
   const [timeEllapsed, setTimeEllapsed] = useState(0);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: "ELLAPSED", myEllapsed: timeEllapsed });
+  }, [timeEllapsed]);
+
   useEffect(() => {
     setTimeout(() => {
       setTimeEllapsed(timeEllapsed + 1);
