@@ -46,9 +46,10 @@ const Webcam = () => {
               <i className="fas fa-cloud-download-alt"></i>
             </button>
           </div>
+          <Progress time={time} />
+
         </Main>
         <div>
-          <Progress time={time} />
         </div>
         <Prompteur />
       </TotalPage>

@@ -5,7 +5,7 @@ export const FlexBox = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding-left: 28.7vh;
+  padding-left: 18.2vh;
 `;
 
 export const BebeFlex1 = styled.div`
