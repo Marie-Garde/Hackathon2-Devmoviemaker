@@ -50,3 +50,7 @@ export const H2Flex = styled.h2`
   padding-top: 2vh;
   font-size: 1.5rem;
 `;
+
+export const KeyWord = styled.h3`
+  font-size: 1.5rem;
+`;

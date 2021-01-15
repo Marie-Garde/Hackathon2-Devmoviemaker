@@ -4,8 +4,9 @@ const initialState = {
 
 export function prompReducer(state = initialState, action) {
     switch (action.type) {
-        case "WORD":
-            return {...state, word: action.word };
+        case "ARRAY":
+            return {...state, word: action.myWord };
+
         default:
             return state;
     }
