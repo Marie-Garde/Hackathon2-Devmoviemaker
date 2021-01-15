@@ -27,6 +27,7 @@
   button.rec-dot:hover,
   button.rec-dot:active,
   button.rec-dot:focus {
+    background-color: #4580c0;
     box-shadow: 0 0 1px 3px #4580c0;
   }
 

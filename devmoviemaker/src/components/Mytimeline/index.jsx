@@ -21,9 +21,12 @@ export default function Progress({ timeleft, timetotal, e, time }) {
   const [progressPercentage, setProgressPercentage] = useState(100);
   useEffect(() => {
     const percentage = (timeEllapsed / time) * 100;
-    const value = Math.min(Math.ceil(percentage, 100));
+    const value = Math.ceil(Math.min(percentage, 100));
     setProgressPercentage(value);
+    console.log(value);
   }, [timeEllapsed]);
+
+  
 
   return (
     <ProgressBar id="progressBar">
