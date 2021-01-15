@@ -5,7 +5,8 @@ export const FlexBox = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding-left: 18.2vh;
+  padding-left: 0;
+  overflow: hidden;
 `;
 
 export const BebeFlex1 = styled.div`
@@ -58,15 +59,15 @@ export const BebeFlex5 = styled.div`
 
 export const H2Flex = styled.h2`
   font-family: "Capriola";
-  color: #B6D1C5;
+  color: #b6d1c5;
   text-align: center;
   padding-top: 2vh;
   font-size: 1.5rem;
-  padding-bottom : 1.7vh;
+  padding-bottom: 1.7vh;
 `;
 
 export const KeyWord = styled.h3`
   font-size: 1.3rem;
-  color : white;
-  padding-left : 2vh;
+  color: white;
+  padding-left: 2vh;
 `;

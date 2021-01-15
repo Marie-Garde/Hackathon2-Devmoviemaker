@@ -11,12 +11,13 @@ export const TotalPage = styled.div `
 export const Main = styled.div `
   color: white;
   padding-left: 29vw;
-  padding-top : 5vh;
+  padding-right: 2vw;
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
 
   video {
     border-radius: 0.5em;
@@ -25,7 +26,7 @@ export const Main = styled.div `
 
   img {
     border-radius: 0.5em;
-    width: 40vw;
+    width: 50vw;
   }
 
   button {
