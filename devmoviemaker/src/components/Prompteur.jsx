@@ -23,7 +23,7 @@ export default function Prompteur() {
         <H2Flex>Présentation</H2Flex>
         <KeyWord>
           {word[0].map((key) => {
-            return key;
+            return <li>{key}</li>;
           })}
         </KeyWord>
       </BebeFlex1>
@@ -36,7 +36,7 @@ export default function Prompteur() {
         <H2Flex>Mes informations</H2Flex>
         <KeyWord>
           {word[1].map((key) => {
-            return key;
+            return <li>{key}</li>;
           })}
         </KeyWord>
       </BebeFlex2>
@@ -52,7 +52,7 @@ export default function Prompteur() {
         <H2Flex>Mes expériences</H2Flex>
         <KeyWord>
           {word[2].map((key) => {
-            return key;
+            return <li>{key}</li>;
           })}
         </KeyWord>
       </BebeFlex3>
@@ -73,7 +73,7 @@ export default function Prompteur() {
         <H2Flex>Mes centres d'intérêts</H2Flex>
         <KeyWord>
           {word[3].map((key) => {
-            return key;
+            return <li>{key}</li>;
           })}
         </KeyWord>
       </BebeFlex4>
@@ -96,7 +96,7 @@ export default function Prompteur() {
         <H2Flex>Pourquoi moi ?</H2Flex>
         <KeyWord>
           {word[4].map((key) => {
-            return key;
+            return <li>{key}</li>;
           })}
         </KeyWord>
       </BebeFlex5>

@@ -66,7 +66,7 @@ export const H2Flex = styled.h2`
   padding-bottom: 1.7vh;
 `;
 
-export const KeyWord = styled.h3`
+export const KeyWord = styled.ul`
   font-size: 1.3rem;
   color: white;
   padding-left: 2vh;
