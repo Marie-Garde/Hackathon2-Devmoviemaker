@@ -7,7 +7,6 @@ import Prompteur from "./Prompteur";
 
 const Webcam = () => {
   const { time } = useSelector((state) => state.timeReducer);
-  console.log(time);
 
   const recordWebcam = useRecordWebcam();
   return (
@@ -49,8 +48,7 @@ const Webcam = () => {
           </div>
         </Main>
         <div>
-          <button>Start</button>
-          <Progress />
+          <Progress time={time} />
         </div>
         <Prompteur />
       </TotalPage>
