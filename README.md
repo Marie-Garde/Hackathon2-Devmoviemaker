@@ -1,4 +1,4 @@
-HACKATHON - WILD CODE SCHOOL
+# HACKATHON - WILD CODE SCHOOL
 
 We had 48h to make this project. We choose to start a website allowing you to prepare and save your video cv.
 
